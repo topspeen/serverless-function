@@ -1,14 +1,13 @@
-const axios = require('axios');
+import CoinGecko from 'coingecko-api';
+const CoinGeckoClient = new CoinGecko();
 
-exports.handler = (event, context, callback) => {
-    axios.get('https://jsonplaceholder.typicode.com/todos/1')
-        .then((res) => {
-            callback(null, {
-                statusCode: 200,
-                body: res.data.title,
-            });
-        })
-        .catch((err) => {
-            callback(err);
-        });
-};
+
+export async function handler() {
+    let data = await CoinGeckoClient.coins.all();
+    let dataFromCoinGecko = await data.data;
+
+    return {
+        statusCode: 200,
+        body: JSON.stringify(dataFromCoinGecko)
+    }
+}

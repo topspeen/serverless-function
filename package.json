@@ -21,6 +21,7 @@
     "homepage": "https://github.com/topspeen/serverless-function#readme",
     "dependencies": {
         "axios": "^1.2.0",
+        "coingecko-api": "^1.0.10",
         "netlify-lambda": "^2.0.15"
     }
 }
