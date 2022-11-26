@@ -1,0 +1,25 @@
+{
+    "name": "serverless-function",
+    "version": "1.0.0",
+    "description": "Learn how to use serverless functions in less than 30 minutes!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start:lambda": "netlify-lambda serve netlify/functions",
+        "build:lambda": "netlify-lambda build netlify/functions"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/topspeen/serverless-function.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/topspeen/serverless-function/issues"
+    },
+    "homepage": "https://github.com/topspeen/serverless-function#readme",
+    "dependencies": {
+        "netlify-lambda": "^2.0.15"
+    }
+}
